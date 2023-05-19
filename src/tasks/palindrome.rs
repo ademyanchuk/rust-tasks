@@ -24,6 +24,17 @@ pub fn palindrome_pairs(words: Vec<String>) -> Vec<Vec<i32>> {
     answer
 }
 
+/// Checks if the string is palindrome
+fn is_palindrome(s: &str) -> bool {
+    let orig: String = s
+        .chars()
+        .filter(|x| x.is_alphanumeric())
+        .map(|x| x.to_lowercase().to_string())
+        .collect();
+    let rev = orig.chars().rev().collect::<String>();
+    orig == rev
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -49,5 +60,21 @@ mod tests {
         ans.sort();
         assert_eq!(ans, vec![vec![0, 1], vec![1, 0], vec![1, 3], vec![3, 1]])
         // Add more test cases here
+    }
+    #[test]
+    fn test_empty_palindrome() {
+        assert!(is_palindrome(""))
+    }
+    #[test]
+    fn test_palindrome_true() {
+        assert!(is_palindrome("A man, a plan, a canal: Panama"))
+    }
+    #[test]
+    fn test_palindrome_non_ascii_true() {
+        assert!(is_palindrome("Ä man, a plan, a canal: Panamä"))
+    }
+    #[test]
+    fn test_not_palindrome() {
+        assert!(!is_palindrome("race a car"))
     }
 }
