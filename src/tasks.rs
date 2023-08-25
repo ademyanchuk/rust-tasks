@@ -7,3 +7,4 @@ pub mod straight_line;
 pub mod top_frequent;
 pub mod two_sum;
 pub mod valid_sentence;
+pub mod interleave_string;
