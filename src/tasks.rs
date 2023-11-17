@@ -1,5 +1,7 @@
+pub mod interleave_string;
 pub mod kth_largest;
 pub mod max_score;
+pub mod min_pair_sum;
 pub mod palindrome;
 pub mod postfixmath;
 pub mod smallest_sequence;
@@ -7,4 +9,3 @@ pub mod straight_line;
 pub mod top_frequent;
 pub mod two_sum;
 pub mod valid_sentence;
-pub mod interleave_string;
