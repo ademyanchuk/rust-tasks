@@ -1,3 +1,4 @@
+pub mod group_anagram;
 pub mod interleave_string;
 pub mod kth_largest;
 pub mod max_score;
