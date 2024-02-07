@@ -1,3 +1,4 @@
+pub mod freq_sort;
 pub mod group_anagram;
 pub mod interleave_string;
 pub mod kth_largest;
